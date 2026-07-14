@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piyush Makhija | AI & ML Developer | Computer Science Undergraduate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=4.1" />
+  <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+
+  <!-- SEO Metadata -->
+  <meta name="title" content="Piyush Makhija | AI & ML Developer | Computer Science Portfolio" />
+  <meta name="description" content="Portfolio of Piyush Makhija, AI & Machine Learning student at VIT Bhopal University. Backends, Large Language Models, RAG pipelines, and infrastructure tools." />
+  <meta name="keywords" content="Piyush Makhija, AI Developer, Machine Learning, VIT Bhopal, RAG, FastAPI, Python, Developer Portfolio" />
+  <meta name="author" content="Piyush Makhija" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Piyush Makhija | AI & ML Developer" />
+  <meta property="og:description" content="Portfolio of Piyush Makhija, Computer Science undergraduate specializing in AI & Machine Learning at VIT Bhopal University." />
+  <meta property="og:image" content="images/avatar.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Piyush Makhija",
+    "url": "https://github.com/PiyushMakhija26",
+    "image": "images/avatar.png",
+    "jobTitle": "AI & Machine Learning Developer",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "Backend Development",
+      "Python",
+      "FastAPI"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "VIT Bhopal University"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Ambient background glow blobs -->
+  <div class="glow-blob glow-1"></div>
+  <div class="glow-blob glow-2"></div>
+  <div class="glow-blob glow-3"></div>
+
+  <!-- Mouse Trail / Soft Glow -->
+  <div class="mouse-glow"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>PM<span class="logo-accent"> /&gt;</span>
+      </a>
+      
+      <button class="nav-toggle" aria-label="Toggle Navigation" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link btn-nav-contact">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="home">
+      <div class="hero-container">
+        <div class="hero-info">
+          <span class="hero-tagline">Pursuing Innovation in AI</span>
+          <h1 class="hero-title">Piyush Makhija</h1>
+          <h2 class="hero-subtitle">B.Tech in Computer Science <span class="highlight">(AI & ML)</span></h2>
+          <p class="hero-description">
+            I engineer intelligent routing engines, Retrieval-Augmented Generation (RAG) pipelines, high-availability API gateways, and robust full-stack software. Focused on bridging the gap between cutting-edge AI architectures and reliable systems engineering.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+            <a href="#projects" class="btn btn-secondary">View Work</a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/PiyushMakhija26" target="_blank" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+            <a href="https://linkedin.com/in/piyush-makhija" target="_blank" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://leetcode.com/u/piyushmakhija" target="_blank" aria-label="LeetCode" class="leetcode-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16.102 17.93l-2.69 2.607c-.466.451-1.111.696-1.744.696a2.285 2.285 0 0 1-1.744-.696l-5.15-4.992a2.478 2.478 0 0 1 0-3.526l4.76-4.614a2.286 2.286 0 0 1 1.625-.68c.573 0 1.112.214 1.519.605l.09.09a.407.407 0 0 1-.007.578l-4.757 4.613a1.653 1.653 0 0 0 0 2.35l5.15 4.993a1.523 1.523 0 0 0 2.2 0l2.69-2.608a.364.364 0 0 1 .522.508zm3.535-4.32a.382.382 0 0 1-.53.518l-4.9-4.753a1.656 1.656 0 0 0-2.351 0L7.1 14.13a1.516 1.516 0 0 0 0 2.19l.024.024a.364.364 0 0 1-.52.508l-.024-.024a2.247 2.247 0 0 1 0-3.238l4.757-4.614a2.387 2.387 0 0 1 3.39 0l4.9 4.753zM13.43 8.351l.09-.089a2.3 2.3 0 0 1 1.626-.68c.573 0 1.111.215 1.518.605l4.02 3.896a.379.379 0 0 1-.526.546l-4.017-3.896a1.53 1.53 0 0 0-2.203 0l-.09.089a.364.364 0 0 1-.518-.508z"/></svg>
+            </a>
+            <a href="mailto:piyushmakhija26@gmail.com" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="tel:+919406888655" aria-label="Phone">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-avatar-wrapper">
+          <div class="hero-avatar-glow"></div>
+          <img src="images/avatar.png" alt="Piyush Makhija Avatar" class="hero-avatar" />
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 – 2027</span>
+            <h3 class="timeline-institution">VIT Bhopal University</h3>
+            <h4 class="timeline-degree">Bachelor of Technology in Computer Science (AI & Machine Learning)</h4>
+            <p class="timeline-location">Bhopal, MP</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023</span>
+            <h3 class="timeline-institution">World Way International School</h3>
+            <h4 class="timeline-degree">Higher Secondary Education (CBSE)</h4>
+            <p class="timeline-location">Bhopal, MP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-subtitle">Proficiencies in programming languages, AI engineering, backend services, and cloud tools. Hover on a skill to highlight its projects.</p>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3 class="skill-card-title">Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill" data-projects="project-omnichat">Python</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill" data-projects="project-csm">JavaScript</span>
+            <span class="skill-pill">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
+          <h3 class="skill-card-title">Backend &amp; Databases</h3>
+          <div class="skill-pills">
+            <span class="skill-pill" data-projects="project-omnichat,project-apigateway">FastAPI</span>
+            <span class="skill-pill" data-projects="project-csm">Node.js</span>
+            <span class="skill-pill" data-projects="project-csm">Express.js</span>
+            <span class="skill-pill" data-projects="project-omnichat">PostgreSQL</span>
+            <span class="skill-pill" data-projects="project-csm">MongoDB</span>
+            <span class="skill-pill" data-projects="project-omnichat,project-apigateway">Redis</span>
+            <span class="skill-pill" data-projects="project-omnichat">SQLAlchemy</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 class="skill-card-title">AI &amp; Machine Learning</h3>
+          <div class="skill-pills">
+            <span class="skill-pill" data-projects="project-omnichat">LLMs</span>
+            <span class="skill-pill" data-projects="project-omnichat">RAG Pipelines</span>
+            <span class="skill-pill" data-projects="project-omnichat">Prompt Engineering</span>
+            <span class="skill-pill" data-projects="project-omnichat">NLP</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3 class="skill-card-title">Infrastructure &amp; Tools</h3>
+          <div class="skill-pills">
+            <span class="skill-pill" data-projects="project-apigateway,project-csm">Git / GitHub Actions</span>
+            <span class="skill-pill" data-projects="project-omnichat,project-apigateway,project-csm">Docker</span>
+            <span class="skill-pill" data-projects="project-apigateway">Linux</span>
+            <span class="skill-pill" data-projects="project-apigateway">Prometheus</span>
+            <span class="skill-pill" data-projects="project-apigateway">Grafana</span>
+            <span class="skill-pill" data-projects="project-apigateway">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card skill-card-wide">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <h3 class="skill-card-title">Computer Science Concepts</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Data Structures &amp; Algorithms</span>
+            <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+            <span class="skill-pill">Operating Systems</span>
+            <span class="skill-pill">DBMS</span>
+            <span class="skill-pill">Computer Networks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A collection of engineering projects. Click any project card to open its technical architecture breakdown.</p>
+      
+      <div class="projects-container">
+        <!-- PROJECT 1 -->
+        <article class="project-card clickable-project" id="project-omnichat" data-skills="Python,FastAPI,PostgreSQL,Redis,Docker,LLMs,RAG,NLP">
+          <div class="project-header">
+            <h3 class="project-name">OmniChat</h3>
+            <a href="https://github.com/PiyushMakhija26" target="_blank" class="project-github" aria-label="View on GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <ul class="project-details">
+            <li>Engineered a multi-LLM routing engine using benchmark heuristics to optimize request distribution based on latency and cost.</li>
+            <li>Built a hybrid Retrieval-Augmented Generation (RAG) pipeline incorporating semantic retrieval and citation generation.</li>
+            <li>Implemented a dual-layer memory system extracting long-term user profiles and securing API access.</li>
+          </ul>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card clickable-project" id="project-apigateway" data-skills="FastAPI,Redis,Docker,Prometheus,GitHub Actions,Git,Linux,REST APIs">
+          <div class="project-header">
+            <h3 class="project-name">API Gateway</h3>
+            <a href="https://github.com/PiyushMakhija26" target="_blank" class="project-github" aria-label="View on GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">Prometheus</span>
+            <span class="project-tag">GitHub Actions</span>
+          </div>
+          <ul class="project-details">
+            <li>Developed an API Gateway implementing reverse proxy routing with circuit breakers to handle upstream failures.</li>
+            <li>Implemented Redis-based Token Bucket and Sliding Window algorithms to control API traffic.</li>
+            <li>Configured CI/CD workflows via GitHub Actions and integrated Prometheus with Grafana.</li>
+          </ul>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card clickable-project" id="project-csm" data-skills="Node.js,Express.js,React.js,MongoDB,Docker,Git,GitHub Actions">
+          <div class="project-header">
+            <h3 class="project-name">Client Service Management</h3>
+            <a href="https://github.com/PiyushMakhija26" target="_blank" class="project-github" aria-label="View on GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <ul class="project-details">
+            <li>Built a full-stack request tracking platform using React.js and Express.js to streamline administrative workflows.</li>
+            <li>Containerized backend and frontend services using Docker to standardize development environments.</li>
+            <li>Configured automated build validation via GitHub Actions workflows.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS SECTION -->
+    <section class="section research-section" id="publications">
+      <h2 class="section-title">Research &amp; Publications</h2>
+      
+      <div class="research-wrapper">
+        <div class="research-badge">IEEE Published</div>
+        <h3 class="research-heading">Network Coding for Efficient Molecular Data Transmission in Cancer Research</h3>
+        <p class="research-meta">Co-Author | IEEE International Conference on Contemporary Computing (IC3), Feb 2025</p>
+        <p class="research-desc">
+          Proposed a network coding framework targeted at improving reliability and communication bandwidth constraints in distributed molecular networks. Handled mathematical simulations validating molecular transmission trade-offs and fault tolerance parameters.
+        </p>
+        <button class="btn btn-secondary" id="btn-read-abstract">Read Abstract</button>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="section certifications-section" id="certifications">
+      <h2 class="section-title">Certifications</h2>
+      
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <h3>Applied Machine Learning</h3>
+          <p class="cert-issuer">University of Michigan</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">💻</div>
+          <h3>Google IT Support</h3>
+          <p class="cert-issuer">Google</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📈</div>
+          <h3>Google Data Analytics</h3>
+          <p class="cert-issuer">Google</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🛡️</div>
+          <h3>Microsoft SC-900</h3>
+          <p class="cert-issuer">Microsoft</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Interested in collaborating or discussing AI and software engineering? Drop me a message.</p>
+
+      <div class="contact-container">
+        <div class="contact-details-panel">
+          <div class="contact-info-block">
+            <h4>Contact Details</h4>
+            <p>Feel free to reach out directly via call or email.</p>
+            <div class="contact-info-item">
+              <span class="info-icon">📧</span>
+              <div>
+                <h5>Email</h5>
+                <a href="mailto:piyushmakhija26@gmail.com">piyushmakhija26@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-icon">📞</span>
+              <div>
+                <h5>Phone</h5>
+                <a href="tel:+919406888655">+91 9406888655</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <h5>Location</h5>
+                <span>Bhopal, Madhya Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-panel">
+          <form class="contact-form" action="https://formspree.io/f/xykoojqb" method="POST">
+            <input type="hidden" name="_subject" value="New Portfolio message from Piyush's Website" />
+            
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" required placeholder="e.g. John Doe" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email *</label>
+              <input type="email" id="email" name="email" required placeholder="e.g. john@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required rows="5" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Piyush Makhija. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/PiyushMakhija26" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/piyush-makhija" target="_blank">LinkedIn</a>
+        <a href="https://leetcode.com/u/piyushmakhija" target="_blank">LeetCode</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC PROJECT MODAL -->
+  <div class="modal" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="project-modal-close">&times;</button>
+      <div class="modal-content" id="project-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH ABSTRACT MODAL -->
+  <div class="modal" id="research-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="research-modal-close">&times;</button>
+      <div class="modal-content">
+        <div class="research-badge">IEEE IC3 2025 Abstract</div>
+        <h3 class="modal-project-title">Network Coding for Efficient Molecular Data Transmission in Cancer Research</h3>
+        <div class="research-modal-body">
+          <div class="abstract-section">
+            <h4>Abstract</h4>
+            <p>Molecular communication is an emerging paradigm where chemical molecules carry information. In medical applications, particularly distributed molecular biosensors in cancer diagnostics, transmitting biological telemetry reliably through turbulent body fluids faces severe bandwidth and noise constraints. This research introduces a network coding framework designed specifically for biological nano-nodes. By employing coding strategies at intermediate molecular nodes, the framework optimizes packet throughput and decreases transmission overhead.</p>
+          </div>
+          <div class="abstract-section">
+            <h4>Key Contributions</h4>
+            <ul>
+              <li><strong>Network Coding Integration:</strong> Adapted traditional linear network coding algorithms to chemical diffusion channels, increasing transmission reliability.</li>
+              <li><strong>Fault-Tolerance Optimization:</strong> Proved through stochastic channel modeling that network coding reduces transmission energy requirements by up to 35% compared to repeat-until-success protocols.</li>
+              <li><strong>Simulation Testing:</strong> Validated communication trade-offs using bio-chemical simulation libraries, showing lower packet drop rates under turbulent flows.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI ASSISTANT CHATBOT -->
+  <div class="chatbot-widget" id="chatbot-widget">
+    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open AI Assistant">
+      <span class="chatbot-toggle-icon">💬</span>
+      <span class="chatbot-notification-dot"></span>
+    </button>
+    
+    <div class="chatbot-box" id="chatbot-box">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar">🤖</div>
+          <div>
+            <h4 class="chatbot-name">Piyush's AI Assistant</h4>
+            <span class="chatbot-status">Online</span>
+          </div>
+        </div>
+        <button class="chatbot-close" id="chatbot-close">&times;</button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="message bot-message">
+          Hello! I'm Piyush's AI Assistant. Ask me anything about his projects, skills, certifications, publication, or contact info!
+        </div>
+      </div>
+      
+      <div class="chatbot-chips" id="chatbot-chips">
+        <button class="chip" data-query="Tell me about OmniChat">OmniChat</button>
+        <button class="chip" data-query="What is the API Gateway?">API Gateway</button>
+        <button class="chip" data-query="What are your skills?">Skills</button>
+        <button class="chip" data-query="Tell me about your research paper">Research</button>
+      </div>
+      
+      <form class="chatbot-input-area" id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask a question..." autocomplete="off" />
+        <button type="submit" class="chatbot-send-btn" aria-label="Send">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
