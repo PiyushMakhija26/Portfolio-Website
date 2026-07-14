@@ -561,7 +561,7 @@ function initAIChatbot() {
 
         // Contact Info
         if (/\b(contact|email|phone|call|mail|linkedin|github|reach|hire)\b/.test(normalized)) {
-            return "You can reach Piyush directly:\n- Email: piyushmakhija26@gmail.com\n- Phone: +91 9406888655\n- LinkedIn: linkedin.com/in/piyush-makhija\n- GitHub: github.com/PiyushMakhija26";
+            return "You can reach Piyush directly:\n- Email: piyushmakhija26@gmail.com\n- LinkedIn: linkedin.com/in/piyush-makhija\n- GitHub: github.com/PiyushMakhija26";
         }
 
         // Fallback Default
