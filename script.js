@@ -341,6 +341,49 @@ const ticketSchema = new mongoose.Schema({
   status: { type: String, enum: ['Open', 'In-Progress', 'Resolved'], default: 'Open' },
   createdAt: { type: Date, default: Date.now }
 });`
+    },
+    "project-focuslock": {
+        title: "Focus Lock",
+        tech: "JavaScript, Chrome Extension API, IndexedDB",
+        challenge: "Creating a privacy-first, highly efficient content filtering system on Chrome browser that operates offline without slowing down page load speeds.",
+        solution: "Utilized Chrome's native declarativeNetRequest API to filter network traffic dynamically. Created an IndexedDB-based local database to store blocklists, configuration rules, and usage data locally.",
+        impact: "Shipped a 100% privacy-first user tool with zero external servers, local analytics rendering under 5ms, and published on the official Chrome Web Store.",
+        diagram: `<svg viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="diagram-svg">
+          <!-- User / Request -->
+          <rect x="20" y="90" width="100" height="60" rx="8" fill="#141827" stroke="#8b5cf6" stroke-width="2"/>
+          <text x="70" y="125" fill="#f8fafc" font-size="12" font-family="JetBrains Mono" text-anchor="middle">Chrome Browser</text>
+          
+          <!-- DeclarativeNetRequest Filter -->
+          <polygon points="230,120 280,70 330,120 280,170" fill="#141827" stroke="#06b6d4" stroke-width="2"/>
+          <text x="280" y="125" fill="#f8fafc" font-size="9" font-family="JetBrains Mono" text-anchor="middle">dNR API Filter</text>
+          
+          <!-- Local IndexedDB Rules -->
+          <rect x="230" y="20" width="100" height="40" rx="6" fill="#141827" stroke="#a78bfa" stroke-width="1.5"/>
+          <text x="280" y="45" fill="#f8fafc" font-size="10" font-family="JetBrains Mono" text-anchor="middle">IndexedDB Rules</text>
+          
+          <!-- Destination Page -->
+          <rect x="450" y="30" width="110" height="50" rx="8" fill="#141827" stroke="#6366f1" stroke-width="1.5"/>
+          <text x="505" y="60" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" text-anchor="middle">Allowed Site</text>
+          
+          <rect x="450" y="160" width="110" height="50" rx="8" fill="#141827" stroke="#8b5cf6" stroke-width="1.5"/>
+          <text x="505" y="190" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" text-anchor="middle">Blocked Page</text>
+          
+          <!-- Connectors -->
+          <path d="M120 120 H230" stroke="#f8fafc" stroke-width="1.5"/>
+          <path d="M280 110 V60" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="3"/>
+          <path d="M305 95 L450 55" stroke="#06b6d4" stroke-width="1.5"/>
+          <path d="M305 145 L450 185" stroke="#06b6d4" stroke-width="1.5"/>
+        </svg>`,
+        code: `// Chrome Extension Service Worker registering dynamic filter rules
+chrome.declarativeNetRequest.updateDynamicRules({
+  addRules: [{
+    id: 1,
+    priority: 1,
+    action: { type: 'redirect', redirect: { extensionPath: '/blocked.html' } },
+    condition: { urlFilter: 'youtube.com/shorts', resourceTypes: ['main_frame'] }
+  }],
+  removeRuleIds: [1]
+});`
     }
 };
 
@@ -527,6 +570,11 @@ function initAIChatbot() {
         // OmniChat
         if (/\b(omnichat|omni|chat|routing|rag|multi-llm)\b/.test(normalized)) {
             return "OmniChat is an AI routing project engineered by Piyush. It routes queries dynamically between models (GPT/Claude) using speed & cost heuristics (saving 40% in cost), uses a Redis/PostgreSQL vector database RAG pipeline for context retrieval, and refresh-token sessions.";
+        }
+
+        // Focus Lock
+        if (/\b(focus|lock|chrome|extension|indexeddb|filter)\b/.test(normalized)) {
+            return "Focus Lock is a privacy-first Chrome Extension built by Piyush that blocks distractions and filters YouTube. It uses the declarativeNetRequest Chrome API for zero-latency network blocking, and client-side IndexedDB to store custom rules and usage analytics offline.";
         }
 
         // API Gateway
