@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react"
+import { ArrowUpRight, GraduationCap, Globe, LifeBuoy, Smartphone, Users, X } from "lucide-react"
 
 const reducedMotion = () =>
   typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -111,12 +112,73 @@ export function ParticleField() {
   return <canvas ref={ref} className="particles" aria-hidden />
 }
 
+const SERVICES = [
+  { icon: Smartphone, title: "App Development", text: "Mobile and cross-platform apps, from idea and prototype to a working release." },
+  { icon: Globe, title: "Website Development", text: "Fast, responsive, modern websites and web apps — portfolios, landing pages, dashboards and more." },
+  { icon: GraduationCap, title: "Customized College Projects", text: "Resume-worthy projects tailored to your course and goals, built properly and explained so you can present them with confidence." },
+  { icon: LifeBuoy, title: "Web Support", text: "Bug fixes, updates, deployments and ongoing help to keep your site running smoothly." },
+  { icon: Users, title: "Build Your Project With Your Team", text: "Hire me to join your team and help build your project — backend, frontend or end to end." },
+]
+
+function ServicesModal({ onClose }: { onClose: () => void }) {
+  const closeBtn = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose()
+    const prev = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+    window.addEventListener("keydown", onKey)
+    closeBtn.current?.focus()
+    return () => {
+      document.body.style.overflow = prev
+      window.removeEventListener("keydown", onKey)
+    }
+  }, [onClose])
+
+  return (
+    <div className="modal" onClick={onClose}>
+      <div className="modal__panel" role="dialog" aria-modal="true" aria-labelledby="services-title" onClick={(e) => e.stopPropagation()}>
+        <button ref={closeBtn} className="modal__close" onClick={onClose} aria-label="Close">
+          <X size={18} />
+        </button>
+        <p className="eyebrow">Services</p>
+        <h2 id="services-title" className="h2">
+          How I can <span className="gradient-text">help you</span>
+        </h2>
+        <ul className="services">
+          {SERVICES.map((s, i) => (
+            <li key={s.title} style={{ ["--i" as string]: i } as CSSProperties}>
+              <span className="services__icon">
+                <s.icon size={22} />
+              </span>
+              <div>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <a
+          href="#contact"
+          className="btn btn--glow btn--block"
+          onClick={() => {
+            onClose()
+          }}
+        >
+          Start a project <ArrowUpRight size={18} />
+        </a>
+      </div>
+    </div>
+  )
+}
+
 /* Soft spotlight that trails the cursor + scroll progress bar + active nav link */
 export function PageChrome({ sections }: { sections: string[] }) {
   const glow = useRef<HTMLDivElement>(null)
   const bar = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState(sections[0])
   const [scrolled, setScrolled] = useState(false)
+  const [hire, setHire] = useState(false)
 
   useEffect(() => {
     let tx = window.innerWidth / 2
@@ -173,10 +235,11 @@ export function PageChrome({ sections }: { sections: string[] }) {
             </a>
           ))}
         </div>
-        <a href="#contact" className="btn btn--sm btn--glow">
+        <button type="button" className="btn btn--sm btn--glow" onClick={() => setHire(true)}>
           Hire me
-        </a>
+        </button>
       </nav>
+      {hire && <ServicesModal onClose={() => setHire(false)} />}
     </>
   )
 }
