@@ -378,7 +378,7 @@ export default function ResumePage() {
                   </span>
                 ))}
               </div>
-              <a href="#" className="btn btn--glow btn--sm">
+              <a href="https://ieeexplore.ieee.org/document/10956408" target="_blank" rel="noreferrer" className="btn btn--glow btn--sm">
                 Read paper <ArrowUpRight size={16} />
               </a>
             </Tilt>
