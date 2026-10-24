@@ -334,9 +334,6 @@ export default function ResumePage() {
             <Tilt className="card research" max={5}>
               <span className="tag tag--solid">Entropy (MDPI) · 2026 · 28(10), 1151</span>
               <h3>Quantum Fisher Information-Guided Diffusion Refinement for Fuzzy and Uncertain Surveillance Regions</h3>
-              <p className="muted small">
-                Sultan Alam, <b className="me">Piyush Makhija</b>, Abdul Khader Jilani Saudagar, Mubarak Albathan
-              </p>
               <p className="muted">
                 Proposes QFI-Diff, a hybrid framework that uses quantum Fisher information as a local reliability measure to
                 guide latent diffusion-based restoration of surveillance images — preserving trustworthy regions while

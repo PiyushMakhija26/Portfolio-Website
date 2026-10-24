@@ -353,19 +353,39 @@ export function Magnetic({ children }: { children: ReactNode }) {
   )
 }
 
-/* Contact form: opens the visitor's mail app with the message filled in */
+/* Contact form: posts to FormSubmit, which emails the message to `to` */
 export function ContactForm({ to }: { to: string }) {
-  const [sent, setSent] = useState(false)
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const f = new FormData(e.currentTarget)
-    const subject = encodeURIComponent(`Hello from ${f.get("name")}`)
-    const body = encodeURIComponent(`${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`)
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`
-    setSent(true)
-    setTimeout(() => setSent(false), 3500)
+    const form = e.currentTarget
+    const f = new FormData(form)
+    setStatus("sending")
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${to}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: f.get("name"),
+          email: f.get("email"),
+          message: f.get("message"),
+          _subject: `Portfolio message from ${f.get("name")}`,
+          _replyto: f.get("email"),
+          _captcha: "false",
+        }),
+      })
+      const data = await res.json()
+      if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message)
+      form.reset()
+      setStatus("sent")
+    } catch {
+      setStatus("error")
+    }
+    setTimeout(() => setStatus("idle"), 5000)
   }
   const style = (i: number): CSSProperties => ({ ["--i" as string]: i })
+  const label = { idle: "Send message", sending: "Sending…", sent: "Message sent ✓", error: "Couldn't send — try again" }[status]
 
   return (
     <form className="form" onSubmit={onSubmit}>
@@ -383,8 +403,8 @@ export function ContactForm({ to }: { to: string }) {
         <textarea name="message" required rows={5} placeholder=" " />
         <span>Tell me about your project…</span>
       </label>
-      <button className={`btn btn--glow btn--block ${sent ? "is-sent" : ""}`} type="submit">
-        {sent ? "Opening your mail app ✓" : "Send message"}
+      <button className={`btn btn--glow btn--block ${status === "sent" ? "is-sent" : ""}`} type="submit" disabled={status === "sending"}>
+        {label}
       </button>
     </form>
   )
