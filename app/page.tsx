@@ -365,12 +365,15 @@ export default function ResumePage() {
           </Reveal>
           <Reveal from="zoom" delay={200}>
             <Tilt className="card research" max={5}>
-              <span className="tag tag--solid">Research Paper · 2024</span>
+              <span className="tag tag--solid">IEEE IC3 2025 · Mathura, India</span>
               <h3>Network Coding for Efficient Molecular Data Transmission in Cancer Research</h3>
               <p className="muted">
-                Investigated novel network coding techniques to optimize molecular data transmission protocols in cancer
-                research applications, improving data throughput and reliability in distributed research environments.
+                Examines how network coding can speed up and streamline the sharing of molecular data between labs in cancer
+                research. Analyses the limits of traditional data-sharing methods, details the network-coding methodology
+                backed by a mathematical model of its effectiveness, and discusses practical challenges and solutions for
+                real-world deployment.
               </p>
+              <p className="muted small">2025 International Conference on Intelligent Control, Computing and Communications · 13–14 February 2025</p>
               <div className="tags">
                 {["Network Coding", "Molecular Data", "Cancer Research", "Data Transmission"].map((t) => (
                   <span key={t} className="tag">
@@ -378,9 +381,14 @@ export default function ResumePage() {
                   </span>
                 ))}
               </div>
-              <a href="https://ieeexplore.ieee.org/document/10956408" target="_blank" rel="noreferrer" className="btn btn--glow btn--sm">
-                Read paper <ArrowUpRight size={16} />
-              </a>
+              <div className="research__actions">
+                <a href="https://ieeexplore.ieee.org/document/10956408" target="_blank" rel="noreferrer" className="btn btn--glow btn--sm">
+                  Read paper <ArrowUpRight size={16} />
+                </a>
+                <a href="https://doi.org/10.1109/IC363308.2025.10956408" target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
+                  DOI
+                </a>
+              </div>
             </Tilt>
           </Reveal>
         </div>
