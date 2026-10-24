@@ -88,6 +88,19 @@ const PROJECTS = [
     tags: ["JavaScript", "Chrome Extension API", "IndexedDB"],
     hue: 210,
   },
+  {
+    name: "Stillspace",
+    github: "https://github.com/PiyushMakhija26/Stillspace",
+    live: "https://chromewebstore.google.com/detail/stillspace/klgdmmjcpamenjfncedglegegbecgemk",
+    sub: "Cinematic New Tab workspace",
+    bullets: [
+      "Published a Chrome New Tab replacement with themes, 100 bundled offline wallpapers, a clock and web search dashboard.",
+      "Added focus tools: 25/50/90-minute timer sessions with stats, daily priorities, autosaving notes and project checkpoints.",
+      "Built saved tab workspaces to stash and restore tabs, with all data kept on-device — no servers, no tracking.",
+    ],
+    tags: ["Chrome Extension", "New Tab", "Local-first", "Privacy"],
+    hue: 290,
+  },
 ]
 
 const CERTS = [
