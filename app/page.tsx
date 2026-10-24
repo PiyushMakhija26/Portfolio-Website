@@ -5,8 +5,9 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 const CONTACT_EMAIL = "piyushmakhija26@gmail.com"
 const LINKS = {
   github: "https://github.com/PiyushMakhija26",
-  linkedin: "https://linkedin.com/in/piyush-makhija",
-  leetcode: "https://leetcode.com/u/piyushmakhija",
+  linkedin: "https://linkedin.com/in/piyush-makhija-539842340/",
+  leetcode: "https://leetcode.com/u/piyushmakhija/",
+  hackathon: "https://drive.google.com/file/d/1OxHgH7rjyI8pDZu2jGnto_MPtup3ETso/view?usp=sharing",
   resume: `${BASE}/Piyush_Makhija_Resume.pdf`,
 }
 
@@ -33,6 +34,7 @@ const SKILLS = [
 const PROJECTS = [
   {
     name: "Collaborative Document Editor",
+    github: "https://github.com/PiyushMakhija26/Real-Time-Collaborative-Document-Editor",
     sub: "Real-time editing with Operational Transformation",
     bullets: [
       "Implemented Operational Transformation with property-based testing, ensuring 100% convergence across 1,000 concurrent edits.",
@@ -44,6 +46,7 @@ const PROJECTS = [
   },
   {
     name: "API Gateway",
+    github: "https://github.com/PiyushMakhija26/API-Gateway",
     sub: "High-throughput reverse proxy",
     bullets: [
       "Architected a FastAPI reverse proxy gateway sustaining 300+ req/sec at sub-600ms p99 latency, with CI/CD and monitoring.",
@@ -54,6 +57,7 @@ const PROJECTS = [
   },
   {
     name: "OmniChat",
+    github: "https://github.com/PiyushMakhija26/Omnichat",
     sub: "Multi-LLM routing chatbot",
     bullets: [
       "Engineered a multi-LLM routing engine with auto-failovers, cutting API costs by 96.7% and ensuring 100% uptime at 1.05s latency.",
@@ -64,6 +68,7 @@ const PROJECTS = [
   },
   {
     name: "Distributed Key-Value Store",
+    github: "https://github.com/PiyushMakhija26/Distributed-Key-Value-Store-with-Raft-Consensus",
     sub: "Raft consensus in Go",
     bullets: [
       "Built Raft consensus in Go (leader election, replication) across a 3-node cluster, achieving 288ms failovers and 184 writes/sec.",
@@ -74,6 +79,8 @@ const PROJECTS = [
   },
   {
     name: "Focus Lock",
+    github: "https://github.com/PiyushMakhija26/Focus-Lock",
+    live: "https://chromewebstore.google.com/detail/focus-lock/pcbbobiaionmhkdjhnllcgichfnioeid",
     sub: "Privacy-first Chrome extension",
     bullets: [
       "Published a privacy-first Chrome extension featuring distraction blocking, YouTube filtering, and IndexedDB local analytics.",
@@ -83,7 +90,14 @@ const PROJECTS = [
   },
 ]
 
-const CERTS = ["Applied Machine Learning (Michigan)", "Google IT Support", "Google Data Analytics", "Microsoft SC-900"]
+const CERTS = [
+  "AWS Certified Cloud Practitioner",
+  "AWS Certified Developer – Associate",
+  "Microsoft SC-900",
+  "Applied Machine Learning (Michigan)",
+  "Google IT Support",
+  "Google Data Analytics",
+]
 
 const allSkills = SKILLS.flatMap((s) => s.items)
 const marquee = [...allSkills, ...allSkills]
@@ -220,8 +234,9 @@ export default function ResumePage() {
               </Tilt>
               <Tilt className="stat">
                 <b>
-                  8.83</b>
-                <span>CGPA · B.Tech</span>
+                  <Counter to={CERTS.length} />
+                </b>
+                <span>Certifications</span>
               </Tilt>
             </div>
           </Reveal>
@@ -289,9 +304,16 @@ export default function ResumePage() {
                       </span>
                     ))}
                   </div>
-                  <a href={LINKS.github} target="_blank" rel="noreferrer" className="btn btn--ghost btn--block">
-                    <Github size={16} /> View on GitHub
-                  </a>
+                  <div className="project__links">
+                    {"live" in p && p.live && (
+                      <a href={p.live} target="_blank" rel="noreferrer" className="btn btn--glow btn--sm">
+                        Live <ArrowUpRight size={16} />
+                      </a>
+                    )}
+                    <a href={p.github} target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
+                      <Github size={16} /> GitHub
+                    </a>
+                  </div>
                 </Tilt>
               </Reveal>
             ))}
@@ -382,7 +404,6 @@ export default function ResumePage() {
                 <h3>VIT Bhopal University</h3>
                 <p className="small accent">B.Tech in Computer Science (AI &amp; Machine Learning)</p>
                 <p className="muted small">Bhopal, MP · 2023 – 2027</p>
-                <p className="edu__cgpa">CGPA 8.83</p>
               </Tilt>
             </Reveal>
             <Reveal delay={120}>
@@ -392,7 +413,12 @@ export default function ResumePage() {
                 </div>
                 <h3>Achievements</h3>
                 <ul className="bullets">
-                  <li>ET-AI Hackathon 2026 — selected as a Semi-Finalist.</li>
+                  <li>
+                    ET-AI Hackathon 2026 — selected as a Semi-Finalist.{" "}
+                    <a href={LINKS.hackathon} target="_blank" rel="noreferrer" className="accent">
+                      Certificate ↗
+                    </a>
+                  </li>
                   <li>
                     LeetCode — 100+ problems solved.{" "}
                     <a href={LINKS.leetcode} target="_blank" rel="noreferrer" className="accent">
