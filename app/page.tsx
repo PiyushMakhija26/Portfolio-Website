@@ -1,12 +1,13 @@
 import { ArrowUpRight, Award, Cloud, Code2, Cpu, Download, GraduationCap, Github, Linkedin, Mail, Server, Sparkles, Trophy } from "lucide-react"
 import { Avatar, ContactForm, Counter, Magnetic, PageChrome, ParticleField, Reveal, Tilt, Typing } from "./components/Effects"
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 const CONTACT_EMAIL = "piyushmakhija26@gmail.com"
 const LINKS = {
   github: "https://github.com/PiyushMakhija26",
   linkedin: "https://linkedin.com/in/piyush-makhija",
   leetcode: "https://leetcode.com/u/piyushmakhija",
-  resume: "/Piyush_Makhija_Resume.pdf",
+  resume: `${BASE}/Piyush_Makhija_Resume.pdf`,
 }
 
 const SECTIONS = ["about", "skills", "projects", "research", "education", "contact"]
@@ -151,7 +152,7 @@ export default function ResumePage() {
           <div className="avatar">
             <div className="avatar__ring" />
             <div className="avatar__ring avatar__ring--2" />
-            <Avatar src="/itachi.jpg" alt="Piyush Makhija" initials="PM" />
+            <Avatar src={`${BASE}/itachi.jpg`} alt="Piyush Makhija" initials="PM" />
             <span className="chip chip--1">React</span>
             <span className="chip chip--2">Python</span>
             <span className="chip chip--3">AWS</span>
@@ -334,7 +335,7 @@ export default function ResumePage() {
                 <a href="https://doi.org/10.3390/e28101151" target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
                   DOI
                 </a>
-                <a href="/certificate.pdf" target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
+                <a href={`${BASE}/certificate.pdf`} target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
                   <Award size={16} /> View certificate
                 </a>
               </div>
