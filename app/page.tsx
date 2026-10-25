@@ -101,6 +101,18 @@ const PROJECTS = [
     tags: ["Chrome Extension", "New Tab", "Local-first", "Privacy"],
     hue: 290,
   },
+  {
+    name: "Stock Sentiment Dashboard",
+    github: "https://github.com/PiyushMakhija26/Stock-Sentiment-Dashboard-",
+    live: "https://36u6q4xbwvw5d8ls8gd5e2.streamlit.app/",
+    sub: "Indian stock analysis with AI insights",
+    bullets: [
+      "Built an interactive Streamlit dashboard for Indian stock analysis, combining technical indicators, news sentiment and Gemini AI-powered insights.",
+      "Added advanced charts, financial metrics and a chatbot assistant for asking questions about a stock.",
+    ],
+    tags: ["Python", "Streamlit", "Gemini AI", "NLP"],
+    hue: 45,
+  },
 ]
 
 const CERTS = [
