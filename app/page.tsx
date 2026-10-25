@@ -47,6 +47,7 @@ const PROJECTS = [
   {
     name: "API Gateway",
     github: "https://github.com/PiyushMakhija26/API-Gateway",
+    live: "https://ai-api-gateway-q8kb.onrender.com/",
     sub: "High-throughput reverse proxy",
     bullets: [
       "Architected a FastAPI reverse proxy gateway sustaining 300+ req/sec at sub-600ms p99 latency, with CI/CD and monitoring.",
@@ -58,6 +59,7 @@ const PROJECTS = [
   {
     name: "OmniChat",
     github: "https://github.com/PiyushMakhija26/Omnichat",
+    live: "https://omnichat-ascqus2tenja3slpmt4qxa.streamlit.app/",
     sub: "Multi-LLM routing chatbot",
     bullets: [
       "Engineered a multi-LLM routing engine with auto-failovers, cutting API costs by 96.7% and ensuring 100% uptime at 1.05s latency.",
@@ -104,7 +106,7 @@ const PROJECTS = [
   {
     name: "Stock Sentiment Dashboard",
     github: "https://github.com/PiyushMakhija26/Stock-Sentiment-Dashboard-",
-    live: "https://36u6q4xbwvw5d8ls8gd5e2.streamlit.app/",
+    live: "https://hpwztze59pbvutngszkbxb.streamlit.app/",
     sub: "Indian stock analysis with AI insights",
     bullets: [
       "Built an interactive Streamlit dashboard for Indian stock analysis, combining technical indicators, news sentiment and Gemini AI-powered insights.",
