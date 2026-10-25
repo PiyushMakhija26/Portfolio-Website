@@ -118,12 +118,13 @@ const PROJECTS = [
 ]
 
 const CERTS = [
-  "AWS Certified Cloud Practitioner",
-  "AWS Certified Developer – Associate",
-  "Microsoft SC-900",
-  "Applied Machine Learning (Michigan)",
-  "Google IT Support",
-  "Google Data Analytics",
+  { name: "AWS Certified Cloud Practitioner", url: "https://drive.google.com/file/d/1roHQ-MI49DmtbTmb2ns6QIfJmznjFDLy/view?usp=sharing" },
+  { name: "AWS Certified Developer – Associate", url: "https://drive.google.com/file/d/1_vyREIicl01UxH0Y_ZvY9xF7HJy2AGF2/view?usp=sharing" },
+  { name: "Microsoft SC-900", url: "https://drive.google.com/file/d/1Z0nWc9zGMR29XqSle3KJW0dpJ6xOMQ8T/view?usp=sharing" },
+  { name: "Applied Machine Learning (Michigan)", url: "https://coursera.org/share/602d4d3286d4f7aaa995cd7efe0e2596" },
+  { name: "Google IT Support", url: "https://drive.google.com/file/d/1cZ5pRoCoqkRMxJe-za24rv0XMECFuYs1/view?usp=sharing" },
+  { name: "Google Data Analytics", url: "https://drive.google.com/file/d/1n41wb3qGFXOnqH7GjzcK0421xVdqbYmj/view?usp=sharing" },
+  { name: "Google AI Essentials", url: "https://drive.google.com/file/d/193oKUU-sFIoiu1GlXGAwJczHeSae4gdg/view?usp=sharing" },
 ]
 
 const allSkills = SKILLS.flatMap((s) => s.items)
@@ -463,14 +464,19 @@ export default function ResumePage() {
           </div>
           <Reveal delay={200}>
             <div className="certs">
-              <Award size={18} /> <b>Certifications</b>
-              <div className="tags">
+              <p className="certs__title">
+                <Award size={18} /> <b>Certifications</b>
+              </p>
+              <ul className="certs__list">
                 {CERTS.map((c) => (
-                  <span key={c} className="tag">
-                    {c}
-                  </span>
+                  <li key={c.name}>
+                    <span>{c.name}</span>
+                    <a href={c.url} target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
+                      View certificate <ArrowUpRight size={14} />
+                    </a>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </Reveal>
         </div>
